@@ -39,7 +39,7 @@ const authHeaders = authTokenPromise.then((authToken): Record<string, string> =>
 );
 
 const graphql = async <T extends {}>(operationName: string, query: string, variables: unknown) => {
-    const response = await fetch('http://127.0.0.1:45457', {
+    const response = await fetch((typeof(window) !== 'undefined' ? window.location.origin : new URL((self as any).registration.scope).origin) + '/graphql', {
         method: 'POST',
         headers: {
             ...await authHeaders,

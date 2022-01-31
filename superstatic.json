@@ -1,0 +1,14 @@
+{
+    "public": "dist",
+    "proxy": {
+        "api": {
+            "origin": "http://localhost:45456"
+        },
+        "graphql": {
+            "origin": "http://localhost:45457"
+        },
+        "accounts": {
+            "origin": "https://accounts.httptoolkit.tech"
+        }
+    }
+}

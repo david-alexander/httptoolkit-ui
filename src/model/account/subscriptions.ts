@@ -21,7 +21,7 @@ export const SubscriptionPlans = {
 
 async function loadPlanPrices() {
     const response = await fetch(
-        `https://accounts.httptoolkit.tech/.netlify/functions/get-prices?product_ids=${
+        `/accounts/.netlify/functions/get-prices?product_ids=${
             Object.values(SubscriptionPlans).map(plan => plan.id).join(',')
         }`
     );
